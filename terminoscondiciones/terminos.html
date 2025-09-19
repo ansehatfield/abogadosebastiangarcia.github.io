@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<header>
+  <h1>Abogado Sebastian Rodriguez</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="terminos.html">Términos</a></li>
+      <li><a href="privacidad.html">Privacidad</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Abogado Sebastian Rodriguez Garcia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a3a5f;
+            --secondary: #4db8ff;
+            --accent: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav {
+            display: flex;
+        }
+        
+        nav a {
+            color: white;
+            margin-left: 1.8rem;
+            font-weight: 500;
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            background-color: #e9ecef;
+            margin-bottom: 2rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary);
+        }
+        
+        /* Términos */
+        .terminos-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: white;
+            border-radius: 8px;
+        }
+        
+        .terminos-header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .terminos-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+        
+        .clausula {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .clausula:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .clausula h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .clausula p, .clausula ul {
+            margin-bottom: 1rem;
+        }
+        
+        .clausula ul {
+            padding-left: 1.5rem;
+        }
+        
+        .clausula li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight {
+            background-color: rgba(77, 184, 255, 0.1);
+            padding: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+        }
+        
+        footer p, footer a {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav {
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav a {
+                margin: 0 0.8rem;
+            }
+            
+            .terminos-content {
+                padding: 1.5rem;
+            }
+            
+            .terminos-header h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .terminos-header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .clausula h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Abogado <span>Sebastian Rodriguez</span></h1>
+            </div>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb container">
+        <a href="index.html">Inicio</a> &gt; <span>Términos y Condiciones</span>
+    </div>
+
+    <main class="container">
+        <div class="terminos-header">
+            <h1>Términos y Condiciones</h1>
+            <p>Última actualización: 15 de Agosto, 2023</p>
+        </div>
+
+        <div class="terminos-content">
+            <div class="clausula">
+                <p><strong>Abogado Sebastian Rodriguez Garcia</strong> (en adelante "El Abogado") ha producido el presente documento donde se establecen las condiciones bajo las cuales el Usuario acepta acceder a los contenidos y servicios a través del sitio web (en adelante, "El Sitio Web"), y se definen los derechos, obligaciones, consecuencias del incumplimiento de las disposiciones definidas y demás información relevante para el uso del Sitio Web entre El Abogado y el Usuario, las cuales son aceptadas por el Usuario al hacer uso del Sitio Web.</p>
+            </div>
+
+            <div class="clausula">
+                <h3>PRIMERA.- DEFINICIONES</h3>
+                <p>Para efectos del presente reglamento, se entenderán las siguientes definiciones:</p>
+                <ul>
+                    <li><strong>Sitio Web:</strong> Conjunto de archivos electrónicos y páginas web organizadas enfocadas a la prestación de los servicios y productos de El Abogado.</li>
+                    <li><strong>Usuario:</strong> persona natural y/o jurídica que accede a los servicios y contenidos del Sitio Web.</li>
+                    <li><strong>Titular de la Información:</strong> Es la persona natural o jurídica a quien se refiere la información que reposa en un banco de datos y sujeto del derecho de hábeas data y demás derechos y garantías a que se refiere la ley.</li>
+                    <li><strong>Anonimización:</strong> Un "dato anónimo" no permite razonablemente establecer a qué persona natural se refiere, vincula o asocia, entonces dicha información no es un dato personal.</li>
+                    <li><strong>Aliados:</strong> entidades públicas y/o privadas que se encuentren vinculadas con El Abogado para permitir a los Usuarios realizar digitalmente sus trámites, acceso a los servicios o consultas.</li>
+                </ul>
+            </div>
+
+            <div class="clausula">
+                <h3>SEGUNDA.- ALCANCE DEL USO DEL SITIO WEB</h3>
+                <p>El Usuario a través del uso del Sitio Web podrá, entre otros servicios:</p>
+                <ul>
+                    <li>Consultar información sobre servicios legales especializados en derecho digital y ciberseguridad.</li>
+                    <li>Solicitar asesoría legal a través de los medios de contacto proporcionados.</li>
+                    <li>Acceder a recursos informativos sobre legislación en materia de tecnología y protección de datos.</li>
+                    <li>Tener acceso a otros sitios web a través de vínculos en el Sitio Web, caso en el cual el Usuario acepta y reconoce que cada proveedor relacionado con dichos vínculos, será responsable por el cumplimiento de la legislación de protección de datos personales en relación con la información suministrada en su propio sitio web.</li>
+                </ul>
+            </div>
+
+            <div class="clausula">
+                <h3>TERCERA.- CONTENIDOS DEL SITIO WEB</h3>
+                <p>Los contenidos y servicios proveídos por el Sitio Web podrán ser modificados o eliminados por El Abogado, previo aviso por cualquier medio idóneo.</p>
+                <div class="highlight">
+                    <p><strong>Nota importante:</strong> El Usuario reconoce y acepta que la información proporcionada en este Sitio Web tiene fines informativos y no constituye asesoría legal formal. Para casos específicos, se recomienda una consulta directa con El Abogado.</p>
+                </div>
+            </div>
+
+            <div class="clausula">
+                <h3>CUARTA.- PROPIEDAD INTELECTUAL</h3>
+                <p>Los derechos del Sitio Web son reservados y de propiedad de El Abogado. Por lo tanto, el Usuario se compromete a no usarlo para obstaculizar o impedir el correcto funcionamiento del sistema. Está totalmente prohibida la venta, copia, alteración y/o distribución del contenido, así como la marca, el nombre, el logo y/o cualquiera de sus componentes que hacen parte de la misma, a menos que exista autorización expresa y por escrito dada a un tercero por parte de El Abogado. Cualquier reproducción o redistribución está expresamente prohibida por la ley y puede conllevar sanciones civiles y penales.</p>
+            </div>
+
+            <div class="clausula">
+                <h3>QUINTA.- LIMITACIÓN DE RESPONSABILIDAD</h3>
+                <p>El Abogado no se hace responsable por el uso indebido que terceros puedan hacer de la información publicada en el Sitio Web, ni por los daños y perjuicios que puedan derivarse de interferencias, omisiones, interrupciones, virus informáticos, fallos telefónicos o desconexiones en el funcionamiento operativo del sistema electrónico, motivadas por causas ajenas a El Abogado.</p>
+            </div>
+
+            <div class="clausula">
+                <h3>SEXTA.- MODIFICACIONES</h3>
+                <p>El Abogado se reserva el derecho de modificar, limitar, suprimir o adicionar los términos de este reglamento en cualquier tiempo. Las modificaciones, limitaciones, supresiones o adiciones de este reglamento se informarán mediante publicación en el Sitio Web. Si transcurridos cinco (5) días hábiles contados a partir de la fecha de la respectiva publicación, el Usuario continúa utilizando el Sitio Web, se entenderá que acepta por conducta inequívoca las modificaciones.</p>
+            </div>
+
+            <div class="clausula">
+                <h3>SÉPTIMA.- LEGISLACIÓN APLICABLE Y JURISDICCIÓN</h3>
+                <p>Los presentes Términos y Condiciones se regirán e interpretarán de acuerdo con las leyes de Colombia. Cualquier disputa que surja de o en relación con estos Términos y Condiciones será sometida a los tribunales competentes de Bucaramanga, Colombia.</p>
+            </div>
+
+            <div class="clausula">
+                <h3>OCTAVA.- ACEPTACIÓN TOTAL</h3>
+                <p>El Usuario manifiesta expresamente tener capacidad legal para usar el Sitio Web. Así mismo, manifiesta haber suministrado información real, veraz y fidedigna; por ende, de forma expresa e inequívoca declara que ha leído, que entiende y que acepta la totalidad de las situaciones reguladas en el presente escrito de Términos y Condiciones por lo que se compromete al cumplimiento total de los deberes, obligaciones, acciones y omisiones aquí expresadas.</p>
+            </div>
+
+            <div class="clausula">
+                <h3>CONTACTO</h3>
+                <p>Para cualquier pregunta o inquietud respecto a estos Términos y Condiciones, por favor contactar a:</p>
+                <p><strong>Abogado Sebastian Rodriguez Garcia</strong><br>
+                Email: sebastianabogado@outlook.com</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>Derechos Reservados © 2024 Abogado Sebastian Rodriguez Garcia</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="sebastianabogado@outlook.com">Contacto</a>
+            <p>Desarrollado con ❤️ por Sebastian Rodriguez Garcia</p>
+        </div>
+    </footer>
+</body>
+</html>
