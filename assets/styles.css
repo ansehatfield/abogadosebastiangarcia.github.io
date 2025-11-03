@@ -27,6 +27,7 @@ body {
   background-color: var(--light);
 }
 
+/* Base para contenedores, importante para responsividad */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -34,17 +35,25 @@ body {
   padding: 0 15px;
 }
 
+/* Regla general: las imágenes y videos son flexibles (Mejora de Responsividad) */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block; 
+}
+
+
 /* ===========================
    Header - Estilo moderno
 =========================== */
 header {
-  background: #1a3a5f; /* azul */
-  color: #f1c40f;      /* dorado */
+  background: var(--primary); /* azul */
+  color: #f1c40f;      /* dorado */
   text-align: center;
   padding: 1rem 0;
 }
 
-header h1 {
+header h2 { /* Cambié h1 a h2 según tu HTML */
   margin: 0;
   font-size: 1.8rem;
   color: #f1c40f;
@@ -60,6 +69,7 @@ nav ul {
 }
 
 nav ul li {
+  position: relative; /* Necesario para el submenú */
   display: inline;
 }
 
@@ -68,14 +78,17 @@ nav ul li a {
   color: white;
   font-weight: bold;
   transition: color 0.3s;
+  padding: 10px 15px;
+  display: block; /* Para hacer clic en toda el área */
 }
 
 nav ul li a:hover {
   color: #f1c40f; /* hover en dorado */
 }
 
+
 /* ===========================
-   Separador
+   Separador (Manteniendo tu estilo)
 =========================== */
 .separator {
   height: 2px;
@@ -85,27 +98,25 @@ nav ul li a:hover {
 }
 
 /* ===========================
-   Contenido principal
+   Contenido principal (Ajustado para semántica)
 =========================== */
-.main-content {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  margin-bottom: 3rem;
-  text-align: center;
+section {
+    padding: 3rem 0; /* Espaciado uniforme para todas las secciones */
 }
 
-.main-content h2 {
+.section-title {
   color: var(--primary);
   font-size: 2.2rem;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--gold);
   display: inline-block;
+  text-align: center;
+  width: auto;
 }
 
-.main-content p {
+/* Estilos para el texto de las secciones de legales */
+.legal-content p {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
@@ -202,6 +213,14 @@ nav ul li a:hover {
   z-index: -1;
 }
 
+.hero-video-content {
+    /* Fondo semi-oscuro para mejor lectura del texto sobre el video */
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
 .hero-video-content h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -219,6 +238,29 @@ nav ul li a:hover {
 }
 
 /* ===========================
+   VIDEO SECCIÓN
+=========================== */
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* Aspect ratio 16:9 con padding-bottom: 56.25% */
+    position: relative;
+    width: 100%; 
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ===========================
    Footer
 =========================== */
 footer {
@@ -227,6 +269,15 @@ footer {
   text-align: center;
   padding: 2rem 0;
   margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se apilen en móvil */
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
 }
 
 footer a {
@@ -238,130 +289,14 @@ footer a:hover {
   color: var(--secondary);
 }
 
-/* ===========================
-   Responsive
-=========================== */
-@media (max-width: 768px) {
-  header {
-    padding: 1rem;
-  }
-  
-  header h1 {
-    font-size: 1.8rem;
-  }
-  
-  nav {
-    gap: 1rem;
-  }
-  
-  .main-content {
-    padding: 1.5rem;
-  }
-  
-  .main-content h2 {
-    font-size: 1.8rem;
-  }
-  
-  .main-content p {
-    font-size: 1rem;
-  }
-
-  .hero-video-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-video-content p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
-  
-  .main-content h2 {
+.social-icons a {
+    margin: 0 10px;
     font-size: 1.5rem;
-  }
-
-  .hero-video-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-video-content p {
-    font-size: 0.9rem;
-  }
+    color: white;
 }
 
 /* ===========================
-   Hero visual
-=========================== */
-.hero {
-  background: linear-gradient(rgba(26,58,95,0.7), rgba(26,58,95,0.7)), url('../images/habeasdata-bg.jpg') center/cover no-repeat;
-  color: white;
-  text-align: center;
-  padding: 4rem 1rem;
-  border-radius: 10px;
-  margin-bottom: 3rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
-}
-
-.hero .btn {
-  padding: 0.7rem 1.5rem;
-  font-size: 1.1rem;
-}
-
-/* ===========================
-   Tarjetas Habeas Data
-=========================== */
-.habeasdata-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.habeasdata-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.habeasdata-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.habeasdata-card h3 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.habeasdata-card h3 i {
-  color: var(--secondary);
-  margin-right: 0.5rem;
-}
-
-.habeasdata-card p {
-  color: var(--dark);
-  line-height: 1.5;
-}
-
-/* ===========================
-   NAVBAR + Submenú
+   NAVBAR + Submenú (Reorganizado)
 =========================== */
 .menu {
   list-style: none;
@@ -378,19 +313,6 @@ footer a:hover {
   margin-left: 20px;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 15px;
-  display: block;
-}
-
-.menu a:hover,
-.menu a.active {
-  color: var(--secondary);
-}
-
 /* ===== Submenú con animación y clics ===== */
 .submenu {
   position: absolute;
@@ -404,19 +326,18 @@ footer a:hover {
   min-width: 220px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 
-  /* Oculto por defecto */
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  pointer-events: none; /* evita clics cuando está cerrado */
+  pointer-events: none;
   transition: all 0.5s ease;
   z-index: 1000;
 }
 
-.submenu.active {
-  max-height: 500px; /* ajusta al tamaño necesario */
-  opacity: 1;
-  pointer-events: auto; /* ahora sí permite clics */
+.dropdown:hover .submenu { /* Usaremos hover simple para escritorio */
+   max-height: 500px; 
+   opacity: 1;
+   pointer-events: auto;
 }
 
 .submenu li a {
@@ -429,4 +350,80 @@ footer a:hover {
 .submenu li a:hover {
   background-color: var(--secondary);
   color: white;
+}
+
+/* ===========================
+   RESPONSIVE: PANTALLAS PEQUEÑAS (hasta 768px)
+=========================== */
+@media screen and (max-width: 768px) {
+    /* --- Base y Títulos --- */
+    .container {
+        padding: 0 10px; 
+    }
+    
+    .section-title, header h2 {
+        font-size: 1.5rem; 
+    }
+
+    /* --- Header y Navegación (CORRECCIÓN CRÍTICA) --- */
+    header {
+        /* Permite que el título y la nav se apilen */
+        flex-direction: column; 
+    }
+
+    /* Menú: Pasa de ser horizontal a vertical */
+    nav ul {
+        flex-direction: column; 
+        width: 100%;
+        gap: 0; 
+        padding: 10px 0;
+    }
+
+    .menu > li {
+        width: 100%;
+        margin-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu a {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    /* Submenú: Pasa a ser estático en móvil (CORRECCIÓN CRÍTICA) */
+    .submenu {
+        position: static; 
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        /* Por defecto, en móvil debería estar oculto con JavaScript */
+    }
+    
+    .dropdown:hover .submenu { /* Mantenemos el hover por si no hay JS */
+        max-height: 500px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .submenu li a {
+        padding-left: 40px; 
+        background-color: #1a3a5f; /* Color primario más oscuro para diferenciar */
+    }
+    
+    /* --- Grid de Servicios y Habeas Data (CORRECCIÓN CRÍTICA) --- */
+    .servicios-grid,
+    .habeasdata-grid {
+        /* Fuerza una sola columna para que las tarjetas se apilen */
+        grid-template-columns: 1fr;
+    }
+
+    /* --- Footer --- */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-icons {
+        order: -1; /* Mueve los iconos arriba en la columna */
+    }
 }
